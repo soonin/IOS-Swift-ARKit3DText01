@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS_Swift_ARKit3DText01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSm-Lu-7No">
+                                <rect key="frame" x="0.0" y="115" width="375" height="552"/>
+                            </arscnView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y57-N7-pei">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="ARKit 3D Text" id="N6t-Sy-m16"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8eU-W4-D10">
+                                <rect key="frame" x="0.0" y="64" width="300" height="52"/>
+                                <color key="backgroundColor" red="0.86162301740000002" green="0.97679832229999997" blue="0.9881622779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="tZS-Mi-6Uh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVE-7z-HdQ">
+                                <rect key="frame" x="300" y="64" width="75" height="52"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="X0S-Za-Yc3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aP2-gO-Ybi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HSm-Lu-7No" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Adx-2n-ymI"/>
+                            <constraint firstItem="HSm-Lu-7No" firstAttribute="top" secondItem="8eU-W4-D10" secondAttribute="bottom" constant="-1" id="C8H-di-FEZ"/>
+                            <constraint firstItem="8eU-W4-D10" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DiS-6K-w15"/>
+                            <constraint firstItem="VVE-7z-HdQ" firstAttribute="top" secondItem="Y57-N7-pei" secondAttribute="bottom" id="EV8-Tj-WwS"/>
+                            <constraint firstItem="Y57-N7-pei" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Eaa-WC-z73"/>
+                            <constraint firstItem="HSm-Lu-7No" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="G78-6R-U6O"/>
+                            <constraint firstItem="VVE-7z-HdQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="HUh-oO-C9F"/>
+                            <constraint firstItem="Y57-N7-pei" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IGs-M2-06H"/>
+                            <constraint firstItem="8eU-W4-D10" firstAttribute="top" secondItem="Y57-N7-pei" secondAttribute="bottom" id="T3Y-pD-hS0"/>
+                            <constraint firstItem="VVE-7z-HdQ" firstAttribute="leading" secondItem="8eU-W4-D10" secondAttribute="trailing" id="YsF-d9-fZJ"/>
+                            <constraint firstItem="HSm-Lu-7No" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bhd-7s-7Pf"/>
+                            <constraint firstItem="VVE-7z-HdQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gUe-hp-aJA"/>
+                            <constraint firstItem="Y57-N7-pei" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ka0-Yf-Gsn"/>
+                            <constraint firstItem="VVE-7z-HdQ" firstAttribute="leading" secondItem="8eU-W4-D10" secondAttribute="trailing" id="lhp-V3-ogt"/>
+                            <constraint firstItem="8eU-W4-D10" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="qKt-tW-eVL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inText" destination="8eU-W4-D10" id="E2I-bv-sle"/>
+                        <outlet property="scnView" destination="HSm-Lu-7No" id="eB9-k0-HsC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
